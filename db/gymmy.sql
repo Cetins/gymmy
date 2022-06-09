@@ -1,4 +1,4 @@
-DROP TABLE registrations;
+DROP TABLE bookings;
 DROP TABLE members;
 DROP TABLE courses;
 
@@ -17,7 +17,7 @@ CREATE TABLE courses (
     active BOOL
 );
 
-CREATE TABLE registrations (
+CREATE TABLE bookings (
     id SERIAL PRIMARY KEY,
     member_id INT REFERENCES members(id) ON DELETE CASCADE,
     course_id INT REFERENCES courses(id) ON DELETE CASCADE

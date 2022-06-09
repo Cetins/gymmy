@@ -27,5 +27,4 @@ course_repository.save(course_3)
 
 
 
-
 pdb.set_trace()
