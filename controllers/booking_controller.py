@@ -22,6 +22,13 @@ def bookings():
     
     return render_template("bookings/index.html", bookings=bookings)
 
+@bookings_blueprint.route("/bookings/<id>")
+def show(id):
+    booking = booking_repository.select(id)
+    member = member_repository.select(booking['member_id'])
+    course = course_repository.select(booking['course_id'])
+    return render_template("bookings/show.html", booking=booking, member=member, course=course)
+
 @bookings_blueprint.route("/bookings/new")
 def new():
     members = member_repository.select_all()

@@ -10,7 +10,7 @@
         <p>Course : <a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></p>
         <p>Date: {{ booking.course.date }}</p>
         <p>Capacity: {{ booking.course.capacity }}</p>
-        <!-- <p>Places Left: </p> -->
+        <a href="/bookings/{{ booking.id }}">Details</a>
     </li>
     {% endfor %}
 </ul>
