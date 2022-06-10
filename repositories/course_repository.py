@@ -1,4 +1,3 @@
-from controllers.course_controller import courses
 from db.run_sql import run_sql
 
 from models.course import Course

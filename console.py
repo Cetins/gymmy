@@ -1,6 +1,5 @@
 import pdb
 import datetime
-from time import strftime
 from models.member import Member
 from models.course import Course
 import repositories.member_repository as member_repository
