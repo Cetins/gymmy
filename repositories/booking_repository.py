@@ -11,3 +11,15 @@ def save(member, course):
     id = results[0]['id']
     booking = Booking(member.id, course.id, id)
     return booking
+
+def select_all():
+    sql = "SELECT * FROM bookings"
+    bookings = run_sql(sql)
+    return bookings
+
+def select(id):
+    sql = "SELECT * FROM bookings WHERE id=%s"
+    values = [id]
+    booking = run_sql(sql, values)
+    return booking
+    

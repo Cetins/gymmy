@@ -13,3 +13,9 @@ def select_all():
     sql = "SELECT * FROM members"
     members = run_sql(sql)
     return members
+
+def select(id):
+    sql = "SELECT * FROM members WHERE id=%s"
+    values = [id]
+    member = run_sql(sql, values)
+    return member

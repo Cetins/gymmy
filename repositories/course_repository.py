@@ -13,3 +13,9 @@ def select_all():
     sql = "SELECT * FROM courses"
     courses = run_sql(sql)
     return courses
+
+def select(id):
+    sql = "SELECT * FROM courses WHERE id=%s"
+    values = [id]
+    course = run_sql(sql,values)
+    return course

@@ -3,6 +3,20 @@
 {% block content %}
 
 <h1>Home</h1>
-<p>Work in progress</p>
+<h2>Welcome Back</h2>
+
+<br>
+
+<h2>Latest Booking</h2>
+<br>
+<ul>
+    <li>
+        <p>
+            <a href="/">{{ member[0].name }}</a> booked <a href="/">{{ course[0].title }}</a>
+        </p>
+    </li>
+</ul>
+
+
 
 {% endblock %}
