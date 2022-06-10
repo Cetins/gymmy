@@ -45,3 +45,8 @@ def update_course(id):
     course_repository.update(updated_course)
     
     return redirect("/courses")
+
+@courses_blueprint.route("/courses/delete/<id>")
+def delete(id):
+    course_repository.delete(id)
+    return redirect("/courses")

@@ -11,6 +11,8 @@
         <p>Capacity: {{ course.capacity }}</p>
         <p>Course Active: {{ course.active }}</p>
         <a href="/courses/edit/{{ course.id }}">Edit Course</a>
+        <a href="/courses/delete/{{ course.id }}">Delete Course</a>
+    </li>
     </li>
     {% endfor %}
 </ul>
