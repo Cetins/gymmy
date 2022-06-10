@@ -10,6 +10,7 @@
         <p>Premium Membership: {{ member.premium }}</p>
         <p>Active Member : {{ member.active }}</p>
         <a href="/members/edit/{{ member.id }}">Edit Member</a>
+        <a href="/members/delete/{{ member.id }}">Delete Member</a>
     </li>
     {% endfor %}
 </ul>

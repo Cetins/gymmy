@@ -1,4 +1,3 @@
-from unittest import result
 from db.run_sql import run_sql
 
 from models.member import Member
@@ -26,3 +25,12 @@ def update(member):
     sql = "UPDATE members SET name=%s, premium=%s, active=%s WHERE id=%s"
     values = [member.name, member.premium, member.active, member.id]
     run_sql(sql, values)
+    
+def delete(id):
+    sql = "DELETE FROM members WHERE id=%s"
+    values = [id]
+    run_sql(sql, values)
+    
+def delete_all():
+    sql = "DELETE FROM members"
+    run_sql(sql)
