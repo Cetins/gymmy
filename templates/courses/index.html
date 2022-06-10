@@ -10,6 +10,7 @@
         <p>Date: {{ course.date }}</p>
         <p>Capacity: {{ course.capacity }}</p>
         <p>Course Active: {{ course.active }}</p>
+        <a href="/courses/edit/{{ course.id }}">Edit Course</a>
     </li>
     {% endfor %}
 </ul>

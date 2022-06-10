@@ -22,6 +22,6 @@ def select(id):
     return course
 
 def update(course):
-    sql = "UPDATE courses SET title=%s, date=%s, capacity=%, active=%s WHERE id=%s"
-    values = [course.title, course.date, course.capacity, course.active]
-    run_sql(sql, values)
+    sql = "UPDATE courses SET title=%s, date=%s, capacity=%s, active=%s WHERE id=%s"
+    values = [course.title, course.date, course.capacity, course.active, course.id]
+    run_sql(sql, values)   

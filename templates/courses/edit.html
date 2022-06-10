@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Edit Course</h1>
+
+<form action="/courses/{{course.id}}" method="post">
+    <label for="course">Course Title</label>
+    <input type="text" name="title" value="{{course.title}}">
+
+    <label for="date">Date</label>
+    <input type="datetime-local" name="date"  value="{{course.date}}">
+
+    <label for="capacity">Capacity</label>
+    <input type="number" name="capacity" value="{{course.capacity}}">
+
+    <label for="active">Active</label>
+    <select name="active">
+        <option value="True">Active</option>
+        <option value="False" {% if course.active == False %} selected {% endif %}>Deactive</option>
+    </select>
+
+    <input type='submit' value="Update Course">
+</form>
+
+{% endblock %}
