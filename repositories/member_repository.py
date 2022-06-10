@@ -8,3 +8,8 @@ def save(member):
     results = run_sql(sql, values)
     member.id = results[0]['id']
     return member
+
+def select_all():
+    sql = "SELECT * FROM members"
+    members = run_sql(sql)
+    return members
