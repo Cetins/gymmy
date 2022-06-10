@@ -14,3 +14,18 @@ def courses():
 def show(id):
     course = course_repository.select(id)
     return render_template("courses/show.html", course=course)
+
+@courses_blueprint.route("/courses/new")
+def new():
+    return render_template("courses/new.html")
+
+@courses_blueprint.route("/courses", methods=["POST"])
+def add_course():
+    title = request.form['title']
+    date = request.form['date']
+    capacity = request.form['capacity']
+    active = request.form['active']
+    new_course = Course(title, date, capacity, active)
+    course_repository.save(new_course)
+    
+    return redirect("/courses")

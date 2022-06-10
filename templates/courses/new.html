@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>New Course</h1>
+
+<h3>Please fill in the details of the new course</h3>
+
+<form action="/courses" method="post">
+    <label for="course">Course Title</label>
+    <input type="text" name="title">
+
+    <label for="date">Date</label>
+    <input type="datetime-local" name="date">
+
+    <label for="capacity">Capacity</label>
+    <input type="number" name="capacity">
+
+    <label for="active">Active</label>
+    <select name="active">
+        <option value="True">Active</option>
+        <option value="False">Deactive</option>
+    </select>
+
+    <input type='submit' value="Add Course">
+</form>
+
+{% endblock %}
