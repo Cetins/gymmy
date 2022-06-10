@@ -9,3 +9,8 @@ courses_blueprint = Blueprint("courses", __name__)
 def courses():
     courses = course_repository.select_all()
     return render_template("courses/index.html", courses=courses)
+
+@courses_blueprint.route("/courses/<id>")
+def show(id):
+    course = course_repository.select(id)
+    return render_template("courses/show.html", course=course)
