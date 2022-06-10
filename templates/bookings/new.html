@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>New Booking</h1>
+
+<form action="/bookings" method="post">
+    <label for="member">Choose A Member</label>
+    <select name="member_id" id="member">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{ member.name }}</option>
+    {% endfor %}
+    </select>
+    
+    <label for="course">Choose A Course</label>
+    <select name="course_id">
+    {% for course in courses %}
+        <option value="{{ course.id }}">{{ course.title }} - {{ course.date }}</option>
+    {% endfor %}
+    </select>
+
+    <input type='submit' value="Add Booking">
+</form>
+
+{% endblock %}

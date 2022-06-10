@@ -21,3 +21,20 @@ def bookings():
         bookings.append(booking)
     
     return render_template("bookings/index.html", bookings=bookings)
+
+@bookings_blueprint.route("/bookings/new")
+def new():
+    members = member_repository.select_all()
+    courses = course_repository.select_all()
+    return render_template("bookings/new.html", members=members, courses=courses)
+
+@bookings_blueprint.route("/bookings", methods=["POST"])
+def add_booking():
+    member_id = request.form["member_id"]
+    course_id = request.form["course_id"]
+    member = member_repository.select(member_id)
+    course = course_repository.select(course_id)
+    new_booking = Booking(member, course)
+    booking_repository.save(new_booking)
+    
+    return redirect("/bookings")

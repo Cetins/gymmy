@@ -1,3 +1,4 @@
+from unittest import result
 from db.run_sql import run_sql
 
 from models.member import Member
@@ -17,5 +18,6 @@ def select_all():
 def select(id):
     sql = "SELECT * FROM members WHERE id=%s"
     values = [id]
-    member = run_sql(sql, values)[0]
+    result = run_sql(sql, values)[0]
+    member = Member(result["name"], result["premium"], result["active"], result["id"])
     return member

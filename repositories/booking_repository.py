@@ -4,13 +4,12 @@ from models.booking import Booking
 from models.member import Member
 from models.course import Course
 
-def save(member, course):
+def save(booking):
     sql = "INSERT INTO bookings (member_id, course_id) VALUES (%s, %s) RETURNING id"
-    values = [member.id, course.id]
+    values = [booking.member.id, booking.course.id]
     results = run_sql(sql, values)
     id = results[0]['id']
-    booking = Booking(member.id, course.id, id)
-    return booking
+    booking.id = id
 
 def select_all():
     sql = "SELECT * FROM bookings"
