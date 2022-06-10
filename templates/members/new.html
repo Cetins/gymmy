@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>New Member</h1>
+
+<h3>Please fill in the details of the new member</h3>
+
+<form action="/members" method="post">
+    <label for="member">Member Name</label>
+    <input type="text" name="member_name">
+
+    <label for="membership">Membership</label>
+    <select name="premium">
+        <option value="True">Premium</option>
+        <option value="False">Standart</option>
+    </select>
+
+    <label for="active">Active</label>
+    <select name="premium">
+        <option value="True">Active</option>
+        <option value="False">Deactive</option>
+    </select>
+
+    <input type='submit' value="Add Member">
+</form>
+
+{% endblock %}
