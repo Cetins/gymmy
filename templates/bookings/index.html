@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Bookings</h1>
+<ul>
+    {% for booking in bookings %}
+    <li>
+        <p>Member : <a href="/members/{{ booking.member.id }}">{{ booking.member.name }}</a></p>
+        <p>Course : <a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></p>
+        <p>Date: {{ booking.course.date }}</p>
+        <p>Capacity: {{ booking.course.capacity }}</p>
+        <!-- <p>Places Left: </p> -->
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
