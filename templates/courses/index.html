@@ -3,6 +3,12 @@
 {% block content %}
 
 <h1>Courses</h1>
-<p>Work in progress</p>
+<ul>
+    {% for course in courses %}
+    <li>
+        <a href="/">{{ course.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

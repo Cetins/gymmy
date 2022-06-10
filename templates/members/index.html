@@ -3,6 +3,12 @@
 {% block content %}
 
 <h1>Members</h1>
-<p>Work in progress</p>
+<ul>
+    {% for member in members %}
+    <li>
+        <a href="/">{{ member.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
