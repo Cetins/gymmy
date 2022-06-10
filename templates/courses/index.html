@@ -6,7 +6,10 @@
 <ul>
     {% for course in courses %}
     <li>
-        <a href="/">{{ course.title }}</a>
+        <a href="/">Course: {{ course.title }}</a>
+        <p>Date: {{ course.date }}</p>
+        <p>Capacity: {{ course.capacity }}</p>
+        <p>Course Active: {{ course.active }}</p>
     </li>
     {% endfor %}
 </ul>

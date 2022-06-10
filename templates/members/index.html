@@ -6,7 +6,9 @@
 <ul>
     {% for member in members %}
     <li>
-        <a href="/">{{ member.name }}</a>
+        <a href="/">Name : {{ member.name }}</a>
+        <p>Premium Membership: {{ member.premium }}</p>
+        <p>Active Member : {{ member.active }}</p>
     </li>
     {% endfor %}
 </ul>
