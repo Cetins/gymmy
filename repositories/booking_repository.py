@@ -21,4 +21,9 @@ def select(id):
     values = [id]
     booking = run_sql(sql, values)[0]
     return booking
+
+def update(booking):
+    sql = "UPDATE bookings SET member_id=%s, course_id=%s WHERE id=%s"
+    values = [booking.member_id, booking.course_id]
+    run_sql(sql, values)
     

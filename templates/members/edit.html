@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Edit Member</h1>
+
+<form action="/members/{{member.id}}" method="post">
+    <label for="member">Member Name</label>
+    <input type="text" name="member_name" autocomplete="{{member.name}}">
+
+    <label for="membership">Membership</label>
+    <select name="premium">
+        <option value="True">Premium</option>
+        <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
+    </select>
+
+    <label for="active">Active</label>
+    <select name="active">
+        <option value="True">Active</option>
+        <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
+    </select>
+
+    <input type='submit' value="Update Member">
+</form>
+
+{% endblock %}

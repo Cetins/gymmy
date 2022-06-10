@@ -20,3 +20,8 @@ def select(id):
     result = run_sql(sql,values)[0]
     course = Course(result["title"], result["date"], result["capacity"], result["active"], result["id"])
     return course
+
+def update(course):
+    sql = "UPDATE courses SET title=%s, date=%s, capacity=%, active=%s WHERE id=%s"
+    values = [course.title, course.date, course.capacity, course.active]
+    run_sql(sql, values)

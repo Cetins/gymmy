@@ -9,9 +9,11 @@
         <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
         <p>Premium Membership: {{ member.premium }}</p>
         <p>Active Member : {{ member.active }}</p>
+        <a href="/members/edit/{{ member.id }}">Edit Member</a>
     </li>
     {% endfor %}
 </ul>
+
 
 <a href="/members/new">Add New Member</a>
 
