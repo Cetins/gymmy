@@ -17,5 +17,5 @@ def select_all():
 def select(id):
     sql = "SELECT * FROM members WHERE id=%s"
     values = [id]
-    member = run_sql(sql, values)
+    member = run_sql(sql, values)[0]
     return member

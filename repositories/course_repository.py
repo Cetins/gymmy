@@ -17,5 +17,5 @@ def select_all():
 def select(id):
     sql = "SELECT * FROM courses WHERE id=%s"
     values = [id]
-    course = run_sql(sql,values)
+    course = run_sql(sql,values)[0]
     return course

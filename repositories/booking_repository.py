@@ -20,6 +20,6 @@ def select_all():
 def select(id):
     sql = "SELECT * FROM bookings WHERE id=%s"
     values = [id]
-    booking = run_sql(sql, values)
+    booking = run_sql(sql, values)[0]
     return booking
     

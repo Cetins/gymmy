@@ -6,7 +6,7 @@
 <ul>
     {% for member in members %}
     <li>
-        <p>Name : <a href="/">{{ member.name }}</a></p>
+        <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
         <p>Premium Membership: {{ member.premium }}</p>
         <p>Active Member : {{ member.active }}</p>
     </li>
