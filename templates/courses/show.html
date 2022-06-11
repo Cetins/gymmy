@@ -7,4 +7,12 @@
 <p>Capacity: {{ course.capacity }}</p>
 <p>Active: {{ course.active }}</p>
 
+<h2>Bookings</h2>
+
+<ul>
+    {% for member in booked_members %}
+        <li><a href="/members/{{ member.id }}">{{ member.name }}</a></li>
+    {% endfor %}
+</ul>
+
 {% endblock %}

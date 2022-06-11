@@ -1,5 +1,7 @@
 import pdb
 import datetime
+from controllers.booking_controller import bookings
+from models.booking import Booking
 from models.member import Member
 from models.course import Course
 import repositories.member_repository as member_repository
@@ -25,8 +27,11 @@ course_repository.save(course_2)
 course_3 = Course("Kick Box", datetime.datetime(2022, 8, 7, 15, 00, 0), 5, True)
 course_repository.save(course_3)
 
-booking_repository.save(member_2, course_3)
-booking_repository.save(member_1, course_2)
+booking_1 = Booking(member_2, course_3)
+booking_2 = Booking(member_1, course_2)
+
+booking_repository.save(booking_1)
+booking_repository.save(booking_2)
 
 
 pdb.set_trace()

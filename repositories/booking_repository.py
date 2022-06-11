@@ -16,6 +16,12 @@ def select_all():
     bookings = run_sql(sql)
     return bookings
 
+def list_bookings_for_course(course_id):
+    sql = "SELECT * FROM bookings WHERE course_id=%s"
+    values = [course_id]
+    bookings = run_sql(sql, values)
+    return bookings
+
 def select(id):
     sql = "SELECT * FROM bookings WHERE id=%s"
     values = [id]
@@ -35,3 +41,4 @@ def delete(id):
 def delete_all():
     sql = "DELETE FROM bookings"
     run_sql(sql)
+    

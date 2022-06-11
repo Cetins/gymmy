@@ -34,4 +34,3 @@ def delete(id):
 def delete_all():
     sql = "DELETE FROM courses"
     run_sql(sql)
-    
