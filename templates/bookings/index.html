@@ -11,6 +11,7 @@
         <p>Date: {{ booking.course.date }}</p>
         <p>Capacity: {{ booking.course.capacity }}</p>
         <a href="/bookings/{{ booking.id }}">Details</a>
+        <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
     </li>
     {% endfor %}
 </ul>

@@ -27,3 +27,11 @@ def update(booking):
     values = [booking.member_id, booking.course_id]
     run_sql(sql, values)
     
+def delete(id):
+    sql = "DELETE FROM bookings WHERE id=%s"
+    values = [id]
+    run_sql(sql, values)
+    
+def delete_all():
+    sql = "DELETE FROM bookings"
+    run_sql(sql)
