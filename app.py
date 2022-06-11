@@ -16,11 +16,12 @@ app.register_blueprint(bookings_blueprint)
 @app.route("/")
 def home():
     bookings = booking_repository.select_all()
+    courses = course_repository.select_all()
     member_id = bookings[-1]['member_id']
     course_id = bookings[-1]['course_id']
     member = member_repository.select(member_id)
     course = course_repository.select(course_id)
-    return render_template("index.html", member=member, course=course)
+    return render_template("index.html", member=member, course=course, courses=courses)
 
 if __name__ == "__main__":
     app.run(debug=True)

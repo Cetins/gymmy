@@ -10,7 +10,7 @@ def save(course):
     return course  
 
 def select_all():
-    sql = "SELECT * FROM courses"
+    sql = "SELECT * FROM courses ORDER BY date"
     courses = run_sql(sql)
     return courses
 

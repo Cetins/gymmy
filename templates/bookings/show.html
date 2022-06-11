@@ -2,10 +2,18 @@
 
 {% block content %}
 
-<h1>{{ course.title }}</h1>
+<h1>Booking Details</h1>
+<p>Class Title: {{ course.title }}</p>
 <p>Member Name: {{ member.name }}</p>
 <p>Course Date: {{ course.date }}</p>
 <p>Course Capacity: {{ course.capacity }}</p>
+
+<h2>Members Booked This Course</h2>
+<ul>
+    {% for member in booked_members %}
+        <li><a href="/members/{{ member.id }}">{{ member.name }}</a></li>
+    {% endfor %}
+</ul>
 
 
 {% endblock %}
