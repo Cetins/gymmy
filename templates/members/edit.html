@@ -2,25 +2,29 @@
 
 {% block content %}
 
-<h1>Edit Member</h1>
+<header class="title">
+    <h1>Edit Member</h1>
+</header>
 
-<form action="/members/{{member.id}}" method="post">
-    <label for="member">Member Name</label>
-    <input type="text" name="member_name" value="{{member.name}}">
-
-    <label for="membership">Membership</label>
-    <select name="premium">
-        <option value="True">Premium</option>
-        <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
-    </select>
-
-    <label for="active">Active</label>
-    <select name="active">
-        <option value="True">Active</option>
-        <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
-    </select>
-
-    <input type='submit' value="Update Member">
-</form>
+<article class="container">
+    <form class="box" action="/members/{{member.id}}" method="post">
+        <label for="member">Member Name</label>
+        <input type="text" name="member_name" value="{{member.name}}">
+    
+        <label for="membership">Membership</label>
+        <select name="premium">
+            <option value="True">Premium</option>
+            <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
+        </select>
+    
+        <label for="active">Active</label>
+        <select name="active">
+            <option value="True">Active</option>
+            <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
+        </select>
+    
+        <input type='submit' value="Update Member">
+    </form>
+</article>
 
 {% endblock %}
