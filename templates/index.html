@@ -5,23 +5,23 @@
 <h1>Home</h1>
 <h2>Welcome Back</h2>
 
-<br>
-
-<h2>Latest Booking</h2>
-<ul>
-    <li>
-        <p>
-            <a href="/members/{{ member.id }}">{{ member.name }}</a> booked <a href="/courses/{{ course.id }}">{{ course.title }}</a>
-        </p>
-    </li>
-</ul>
-
-<h2>Upcoming Courses</h2>
-
-{% for course in courses[:3] %}
-
-<h3>{{ course.title }}</h3><p>Date: {{ course.date }}</p>
-
-{% endfor %}
+<section class="container">
+    <article class="box">
+        <div>
+            <h2>Latest Booking</h2>
+            <p>
+                <a href="/members/{{ member.id }}">{{ member.name }}</a> booked <a href="/courses/{{ course.id }}">{{ course.title }}</a>
+            </p>
+        </div>
+    </article>
+    <article class="box">
+        <div>
+            <h2>Upcoming Courses</h2>
+            {% for course in courses[:3] %}
+            <h3>{{ course.title }}</h3><p>Date: {{ course.date }}</p>
+            {% endfor %}
+        </div>
+    </article>
+</section>
 
 {% endblock %}
