@@ -21,21 +21,19 @@
         {% endif %}
 
         <div>
-            <span>
-                <button>
-                    <a href="/members/edit/{{ member.id }}">Edit Member</a>
-                </button>
-            </span>
-            <span>
-                <button>
-                    <a href="/members/delete/{{ member.id }}">Delete Member</a>
-                </button>
-            </span>
+            <button>
+                <a href="/members/edit/{{ member.id }}">Edit Member</a>
+
+            </button>
+            <button>
+                <a href="/members/delete/{{ member.id }}">Delete Member</a>
+            </button>
         </div>
     </div>
     {% endfor %}
 </article>
-<button><a href="/members/new">Add New Member</a></button>
-
+<button>
+    <a href="/members/new">Add New Member</a>
+</button>
 
 {% endblock %}
