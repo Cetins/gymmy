@@ -1,9 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Sorry</h1>
-<p>{{ member.name }} does not have a premium membership.</p>
-<p>In order to book a peak-hour course {{ member.name }} need to have premium membership.</p>
 
-<p>Please try again with another <a href="/courses">course</a>.</p>
+<header class="title">
+    <h1>Sorry</h1>
+</header>
+
+<article class="container">
+    <div class="box">
+        <p>{{ member.name }} does not have a premium membership.</p>
+        <p>In order to book a peak-hour course {{ member.name }} need to have premium membership.</p>
+        <p>Please try again with another <a href="/courses">course</a>.</p>
+    </div>
+</article>
+<footer class="footer">
+    <button>
+        <a href="/bookings/new">Make Another Booking</a>
+    </button>
+</footer>
+
+
 {% endblock %}
