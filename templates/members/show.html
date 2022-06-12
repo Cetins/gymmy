@@ -2,8 +2,15 @@
 
 {% block content %}
 
-<h1>{{ member.name }}</h1>
-<p>Premium: {{ member.premium }}</p>
-<p>Active: {{ member.active }}</p>
+<header class="title">
+    <h1>Member Details</h1>
+</header>
+<article class="container">
+    <div class="box">
+        <h1>{{ member.name }}</h1>
+        <p>Premium: {{ member.premium }}</p>
+        <p>Active: {{ member.active }}</p>
+    </div>
+</article>
 
 {% endblock %}
