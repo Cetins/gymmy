@@ -3,9 +3,9 @@
 {% block content %}
 
 <h1>Members</h1>
-<ul>
+<article class="container">
     {% for member in members %}
-    <li>
+    <div class="box">
         <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
 
         {% if member.premium %}
@@ -19,14 +19,23 @@
         {% else %}
             <p>Active Member : Yes</p>
         {% endif %}
-        
-        <a href="/members/edit/{{ member.id }}">Edit Member</a>
-        <a href="/members/delete/{{ member.id }}">Delete Member</a>
-    </li>
+
+        <div>
+            <span>
+                <button>
+                    <a href="/members/edit/{{ member.id }}">Edit Member</a>
+                </button>
+            </span>
+            <span>
+                <button>
+                    <a href="/members/delete/{{ member.id }}">Delete Member</a>
+                </button>
+            </span>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</article>
+<button><a href="/members/new">Add New Member</a></button>
 
-
-<a href="/members/new">Add New Member</a>
 
 {% endblock %}
