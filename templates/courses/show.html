@@ -2,17 +2,23 @@
 
 {% block content %}
 
-<h1>{{ course.title }}</h1>
-<p>Date: {{ course.date }}</p>
-<p>Capacity: {{ course.capacity }}</p>
-<p>Active: {{ course.active }}</p>
+<header class="title">
+    <h1>Course Details</h1>
+</header>
 
-<h2>Bookings</h2>
-
-<ul>
-    {% for member in booked_members %}
-        <li><a href="/members/{{ member.id }}">{{ member.name }}</a></li>
-    {% endfor %}
-</ul>
+<article class="container">
+    <div class="box">
+        <h1>{{ course.title }}</h1>
+        <p>Date: {{ course.date }}</p>
+        <p>Capacity: {{ course.capacity }}</p>
+        <p>Active: {{ course.active }}</p>
+    </div>
+    <div class="box">
+        <h2>Bookings</h2>
+        {% for member in booked_members %}
+        <a href="/members/{{ member.id }}">{{ member.name }}</a>
+        {% endfor %}
+    </div>
+</article>
 
 {% endblock %}
