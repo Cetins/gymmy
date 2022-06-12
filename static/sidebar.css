@@ -1,0 +1,23 @@
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    background-color: #EC994B;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar i {
+    width: 30px;
+}
