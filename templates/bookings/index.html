@@ -12,11 +12,11 @@
         <p>Course : <a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></p>
         <p>Date: {{ booking.course.date }}</p>
         <p>Capacity: {{ booking.course.capacity }}</p>
-        <div>
+        <div class="flex-center">
             <button>
                 <a href="/bookings/{{ booking.id }}">Details</a>
             </button>
-            <button>
+            <button class="delete-button">
                 <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
             </button>
         </div>

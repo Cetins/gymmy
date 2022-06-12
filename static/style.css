@@ -11,10 +11,11 @@ h1 {
 a {
     text-decoration: none;
     color: black;
-    font-weight: 1000;
+    font-weight: bolder;
 }
 a:hover {
     cursor: pointer;
+    text-decoration: underline;
 }
 button {
 	box-shadow:inset 0px 1px 0px 0px #a4e271;
@@ -24,6 +25,7 @@ button {
 	border:1px solid #74b807;
 	color:#ffffff;
 	padding:6px 24px;
+    margin: 10px;
 }
 button:hover {
 	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
@@ -42,6 +44,7 @@ button:active {
 	border:1px solid #d02718;
 	color:#ffffff;
 	padding:6px 24px;
+    margin: 10px;
 }
 
 .delete-button:hover {
@@ -53,6 +56,14 @@ button:active {
 	top:1px;
 }
 
+button > a:hover {
+    text-decoration: none;
+}
+
+.flex-center {
+    display: flex;
+    justify-items: center;
+}
 
 li {
     list-style: none;
@@ -98,7 +109,7 @@ li {
     display: grid;
     height: auto;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr, auto;
     margin-left: 200px;
     padding: 0px 10px;
