@@ -2,7 +2,9 @@
 
 {% block content %}
 
-<h1>Members</h1>
+<header class="title">
+    <h1>Members</h1>
+</header>
 <article class="container">
     {% for member in members %}
     <div class="box">
@@ -23,9 +25,8 @@
         <div>
             <button>
                 <a href="/members/edit/{{ member.id }}">Edit Member</a>
-
             </button>
-            <button>
+            <button class="delete-button">
                 <a href="/members/delete/{{ member.id }}">Delete Member</a>
             </button>
         </div>

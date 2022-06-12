@@ -2,8 +2,9 @@
 
 {% block content %}
 
-<h1>Home</h1>
-<h2>Welcome Back</h2>
+<header class="title">
+    <h1>Welcome Back</h1>
+</header>
 
 <section class="container">
     <article class="box">
@@ -18,7 +19,7 @@
         <div>
             <h2>Upcoming Courses</h2>
             {% for course in courses[:3] %}
-            <h3>{{ course.title }}</h3><p>Date: {{ course.date }}</p>
+            <h3>{{ course.title }}</h3><p><i class="fa-solid fa-calendar-check"></i> {{ course.date }}</p>
             {% endfor %}
         </div>
     </article>

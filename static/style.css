@@ -1,7 +1,97 @@
 body {
     background: black;
-    font-family: system-ui, sans-serif;
-    color: white;
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+h1 {
+    color: #F1EEE9;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 1000;
+}
+a:hover {
+    cursor: pointer;
+}
+button {
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+	border-radius:6px;
+	border:1px solid #74b807;
+	color:#ffffff;
+	padding:6px 24px;
+}
+button:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.delete-button {
+    box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	color:#ffffff;
+	padding:6px 24px;
+}
+
+.delete-button:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.delete-button:active {
+	position:relative;
+	top:1px;
+}
+
+
+li {
+    list-style: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    background-color: #EC994B;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar i {
+    width: 30px;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
 }
 
 .container {
@@ -9,12 +99,15 @@ body {
     height: auto;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto;
+    grid-template-rows: 1fr, auto;
+    margin-left: 200px;
+    padding: 0px 10px;
 }
 
 .box {
+    padding: 1rem;
     display: grid;
     place-items: center;
-    background: lightblue;
-    border: solid red;
+    background: #F1EEE9;
+    border-radius: 1rem;
 }

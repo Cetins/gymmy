@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d5b627ee5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/style.css">
     <title>Home</title>
 </head>
 <body>
-    <img src="/static/images/logo.jpg" alt="Gymmy Logo" height="60px">
-    <menu>
-        <li><a href="/">Home</a></li>
-        <li><a href="/members">Members</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/bookings">Bookings</a></li>
+    <menu class="sidebar">
+        <li><a href="/"><i class="fa-solid fa-house"></i>  Home</a></li>
+        <li><a href="/members"><i class="fa-solid fa-user-group"></i>  Members</a></li>
+        <li><a href="/courses"><i class="fa-solid fa-dumbbell"></i>  Courses</a></li>
+        <li><a href="/bookings"><i class="fa-solid fa-calendar-check"></i>  Bookings</a></li>
     </menu>
     <main>
         {% block content %}
