@@ -11,16 +11,17 @@
 <ul>
     <li>
         <p>
-            <a href="/">{{ member.name }}</a> booked <a href="/">{{ course.title }}</a>
+            <a href="/members/{{ member.id }}">{{ member.name }}</a> booked <a href="/courses/{{ course.id }}">{{ course.title }}</a>
         </p>
     </li>
 </ul>
 
 <h2>Upcoming Courses</h2>
-<h3>{{ courses[0].title }}</h3><p>Date: {{ courses[0].date }}</p>
-<h3>{{ courses[1].title }}</h3><p>Date: {{ courses[1].date }}</p>
-<h3>{{ courses[2].title }}</h3><p>Date: {{ courses[2].date }}</p>
 
+{% for course in courses[:3] %}
 
+<h3>{{ course.title }}</h3><p>Date: {{ course.date }}</p>
+
+{% endfor %}
 
 {% endblock %}

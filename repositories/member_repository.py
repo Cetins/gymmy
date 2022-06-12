@@ -10,7 +10,7 @@ def save(member):
     return member
 
 def select_all():
-    sql = "SELECT * FROM members"
+    sql = "SELECT * FROM members ORDER BY name"
     members = run_sql(sql)
     return members
 

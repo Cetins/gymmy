@@ -7,8 +7,19 @@
     {% for member in members %}
     <li>
         <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
-        <p>Premium Membership: {{ member.premium }}</p>
-        <p>Active Member : {{ member.active }}</p>
+
+        {% if member.premium %}
+            <p>Membership : Premium</p>
+        {% else %}
+            <p>Membership : Standard</p>
+        {% endif %}
+
+        {% if member.active %}
+            <p>Active Member : Yes</p>
+        {% else %}
+            <p>Active Member : Yes</p>
+        {% endif %}
+        
         <a href="/members/edit/{{ member.id }}">Edit Member</a>
         <a href="/members/delete/{{ member.id }}">Delete Member</a>
     </li>
