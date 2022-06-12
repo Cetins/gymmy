@@ -3,19 +3,27 @@
 {% block content %}
 
 <h1>Bookings</h1>
-<ul>
+<article class="container">
     {% for booking in bookings %}
-    <li>
+    <div class="box">
         <p>Member : <a href="/members/{{ booking.member.id }}">{{ booking.member.name }}</a></p>
         <p>Course : <a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></p>
         <p>Date: {{ booking.course.date }}</p>
         <p>Capacity: {{ booking.course.capacity }}</p>
-        <a href="/bookings/{{ booking.id }}">Details</a>
-        <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
-    </li>
+        <div>
+            <button>
+                <a href="/bookings/{{ booking.id }}">Details</a>
+            </button>
+            <button>
+                <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
+            </button>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</article>
 
-<a href="/bookings/new">Add New Booking</a>
+<button>
+    <a href="/bookings/new">Add New Booking</a>
+</button>
 
 {% endblock %}
