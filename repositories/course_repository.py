@@ -23,7 +23,7 @@ def select(id):
 
 def update(course):
     sql = "UPDATE courses SET title=%s, level=%s, date=%s, capacity=%s, active=%s WHERE id=%s"
-    values = [course.title, course.date, course.capacity, course.active, course.id]
+    values = [course.title, course.level, course.date, course.capacity, course.active, course.id]
     run_sql(sql, values)  
     
 def delete(id):

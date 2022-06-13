@@ -31,5 +31,6 @@ CREATE TABLE bookings (
 CREATE TABLE payments (
     id SERIAL PRIMARY KEY,
     amount INT,
+    date TIMESTAMP,
     member_id INT REFERENCES members(id) ON DELETE CASCADE
 )

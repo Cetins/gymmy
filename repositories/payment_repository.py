@@ -4,8 +4,8 @@ from models.payment import Payment
 from models.member import Member
 
 def save(payment):
-    sql = "INSERT INTO payments (amount, member_id) VALUES (%s, %s) RETURNING id"
-    values = [payment.amount, payment.member.id]
+    sql = "INSERT INTO payments (amount, date, member_id,) VALUES (%s, %s, %s) RETURNING id"
+    values = [payment.amount, payment.date, payment.member.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     payment.id = id
@@ -22,8 +22,8 @@ def select(id):
     return payment
 
 def update(payment):
-    sql = "UPDATE payments SET amount=%s, member_id=%s WHERE id=%s"
-    values = [payment.amount, payment.member_id]
+    sql = "UPDATE payments SET amount=%s, date=%s, member_id=%s WHERE id=%s"
+    values = [payment.amount, payment.date, payment.member_id]
     run_sql(sql, values)
     
 def delete(id):

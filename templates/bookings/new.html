@@ -18,7 +18,7 @@
         <label for="course">Choose A Course</label>
         <select name="course_id">
         {% for course in courses %}
-            <option value="{{ course.id }}">{{ course.title }} - {{ course.date }}</option>
+            <option value="{{ course.id }}"><span class="form-input-title">{{ course.title }}</span> - {{ course.date }}</option>
         {% endfor %}
         </select>
     
