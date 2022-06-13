@@ -46,7 +46,6 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
     
-    
 def delete_all():
     sql = "DELETE FROM bookings"
     run_sql(sql)
