@@ -7,21 +7,27 @@
 </header>
 
 <article class="container">
-    <form class="box" action="/members/{{member.id}}" method="post">
-        <label for="member">Member Name</label>
-        <input type="text" name="member_name" value="  {{member.name}}">
+    <form class="form-box" action="/members/{{member.id}}" method="post">
+        <span>
+            <label for="member">Member Name</label>
+            <input type="text" name="member_name" value="  {{member.name}}">
+        </span>
     
-        <label for="membership">Membership</label>
-        <select name="premium">
-            <option value="True">Premium</option>
-            <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
-        </select>
+        <span>
+            <label for="membership">Membership</label>
+            <select name="premium">
+                <option value="True">Premium</option>
+                <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
+            </select>
+        </span>
     
-        <label for="active">Active</label>
-        <select name="active">
-            <option value="True">Active</option>
-            <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
-        </select>
+        <span>
+            <label for="active">Active</label>
+            <select name="active">
+                <option value="True">Active</option>
+                <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
+            </select>
+        </span>
     
         <input type='submit' value="Update Member">
     </form>

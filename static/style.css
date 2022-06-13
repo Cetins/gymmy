@@ -56,15 +56,7 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr, auto;
     margin-left: 200px;
-    padding: 0px 10px;
-}
-
-.inner-container {
-    display: grid;
-    height: auto;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 1fr, auto;
+    margin-top: 2rem;
     padding: 0px 10px;
 }
 
@@ -77,31 +69,19 @@ li {
     color: black;
 }
 
-.inner-box {
+.form-box {
     padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    display: grid;
+    place-items: center;
     background: #F1EEE9;
+    max-width: max-content;
     border-radius: 1rem;
     color: black;
 }
 
-.form-container {
-    display: grid;
-    margin-left: 200px;
-}
-
-.form-box {
-    background: #F1EEE9;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-}
-
 label {
     display: inline-block;
-    width: 13rem;
+    width: 9rem;
 }
 
 input, select, option {

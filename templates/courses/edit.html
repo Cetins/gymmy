@@ -7,21 +7,29 @@
 </header>
 
 <article class="container">
-    <form class="box" action="/courses/{{course.id}}" method="post">
-        <label for="course">Course Title</label>
-        <input type="text" name="title" value="  {{course.title}}">
+    <form class="form-box" action="/courses/{{course.id}}" method="post">
+        <span>
+            <label for="course">Course Title</label>
+            <input type="text" name="title" value="  {{course.title}}">
+        </span>
     
-        <label for="date">Date</label>
-        <input type="datetime-local" name="date"  value="{{course.date.isoformat()}}">
+        <span>
+            <label for="date">Date</label>
+            <input type="datetime-local" name="date"  value="{{course.date.isoformat()}}">
+        </span>
     
-        <label for="capacity">Capacity</label>
-        <input type="number" name="capacity" value="{{course.capacity}}">
+        <span>
+            <label for="capacity">Capacity</label>
+            <input type="number" name="capacity" value="{{course.capacity}}">
+        </span>
     
-        <label for="active">Active</label>
-        <select name="active">
-            <option value="True">Active</option>
-            <option value="False" {% if course.active == False %} selected {% endif %}>Deactive</option>
-        </select>
+        <span>
+            <label for="active">Active</label>
+            <select name="active">
+                <option value="True">Active</option>
+                <option value="False" {% if course.active == False %} selected {% endif %}>Deactive</option>
+            </select>
+        </span>
     
         <input type='submit' value="Update Course">
     </form>
