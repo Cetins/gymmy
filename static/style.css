@@ -1,5 +1,7 @@
 body {
     background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Lato', sans-serif;
     color: black;
 }
