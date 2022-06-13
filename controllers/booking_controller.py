@@ -55,7 +55,17 @@ def add_booking():
         time = str(course.date)
         peak_time = datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
         if peak_time.hour > 17:
-            return render_template("/bookings/apology.html", member=member)
+            apology = [
+                f"{member.name} does not have a premium membership.",
+                f"In order to book a peak-hour course {member.name} need to have premium membership." 
+                ]
+            return render_template("/bookings/apology.html", apology=apology)
+    if course.capacity < 1:
+        apology = [
+            f"{course.title} is full.",
+            f"You can increase the capacity by editing course or pick another course/slot with availability" 
+            ]
+        return render_template("/bookings/apology.html", apology=apology)
     
     booking_repository.save(new_booking)
     
