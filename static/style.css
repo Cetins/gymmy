@@ -55,6 +55,7 @@ li {
 .box {
     padding: 1rem;
     display: grid;
+    place-items: center;
     background: #F1EEE9;
     border-radius: 1rem;
     color: black;
@@ -62,7 +63,7 @@ li {
 
 input, select {
     margin: 1rem;
-    padding: 1rem, 0;
+    padding: 0;
     height: 3rem;
     width: 13rem;
 }
