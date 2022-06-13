@@ -4,6 +4,7 @@
     position: fixed;
     background-color: #EC994B;
     padding-top: 16px;
+    margin: 0;
 }
 
 .sidebar a {

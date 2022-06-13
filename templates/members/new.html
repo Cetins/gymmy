@@ -7,23 +7,32 @@
     <h3>Please fill in the details of the new member</h3>
 </header>
 
-<article class="container">
-    <form class="box" action="/members" method="post">
-        <label for="member">Member Name</label>
-        <input type="text" name="member_name">
-    
-        <label for="membership">Membership</label>
-        <select name="premium">
-            <option value="True">Premium</option>
-            <option value="False">Standart</option>
-        </select>
-    
-        <label for="active">Active</label>
-        <select name="active">
-            <option value="True">Active</option>
-            <option value="False">Deactive</option>
-        </select>
-    
+<article class="form-container">
+    <form class="form-box" action="/members" method="post">
+            <span>
+                <label for="member">Member Name</label>
+                <input type="text" name="member_name">
+            </span>
+            <br>
+        
+            <span>
+                <label for="membership">  Membership</label>
+                <select name="premium">
+                    <option value="True">  Premium</option>
+                    <option value="False">  Standart</option>
+                </select>
+            </span>
+            <br>
+        
+            <span>
+                <label for="active">  Active</label>
+                <select name="active">
+                    <option value="True">  Active</option>
+                    <option value="False">  Deactive</option>
+                </select>
+            </span>
+            <br>
+
         <input class="submit-input" type='submit' value="Add Member">
     </form>
 </article>
