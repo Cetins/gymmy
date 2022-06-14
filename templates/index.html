@@ -7,19 +7,19 @@
 </header>
 
 <section class="container">
-    <article class="box">
+    <article class="box main-box">
         <div>
-            <h2>Latest Booking</h2>
+            <h2 class="padding-1rem">Latest Booking</h2>
             <p>
                 <a href="/members/{{ member.id }}">{{ member.name }}</a> booked <a href="/courses/{{ course.id }}">{{ course.title }}</a>
             </p>
         </div>
     </article>
-    <article class="box">
+    <article class="box main-box">
         <div>
-            <h2>Upcoming Courses</h2>
+            <h2 class="padding-1rem">Upcoming Courses</h2>
             {% for course in courses[:3] %}
-            <h3>{{ course.title }}</h3><p><i class="fa-solid fa-calendar-check"></i> {{ course.date }}</p>
+            <h3 class="padding-1rem">{{ course.title }}</h3><p><i class="fa-solid fa-calendar-check"></i> {{ course.date }}</p>
             {% endfor %}
         </div>
     </article>

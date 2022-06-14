@@ -12,6 +12,7 @@
             <label for="member">Member Name</label>
             <input type="text" name="member_name" value="  {{member.name}}">
         </span>
+        <br>
         <span>
             <label for="age">Member Age</label>
             <input type="number" name="age" value="{{member.age}}">
@@ -23,13 +24,13 @@
         </span>
         <br>
         <span>
-        <span>
             <label for="membership">Membership</label>
             <select name="premium">
                 <option value="True">Premium</option>
                 <option value="False" {% if member.premium == False %} selected {% endif %}>Standart</option>
             </select>
         </span>
+        <br>
         <span>
             <label for="active">Active</label>
             <select name="active">
@@ -37,6 +38,7 @@
                 <option value="False" {% if member.active == False %} selected {% endif %}>Deactive</option>
             </select>
         </span>
+        <br>
         <input type='submit' value="Update Member">
     </form>
 </article>
