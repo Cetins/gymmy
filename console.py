@@ -1,6 +1,6 @@
 import pdb
 import datetime
-from controllers.booking_controller import bookings
+from controllers.bookings_controller import bookings
 from models.booking import Booking
 from models.member import Member
 from models.course import Course
