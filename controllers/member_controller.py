@@ -22,6 +22,7 @@ def new():
 @members_blueprint.route("/members", methods=["POST"])
 def add_member():
     name = request.form['member_name']
+    name = name.title()
     age = request.form['age']
     email = request.form['email']
     premium = request.form['premium']
@@ -39,6 +40,7 @@ def edit_member(id):
 @members_blueprint.route("/members/<id>", methods=["POST"])
 def update_member(id):
     name = request.form['member_name']
+    name = name.title()
     age = request.form['age']
     email = request.form['email']
     premium = request.form['premium']
