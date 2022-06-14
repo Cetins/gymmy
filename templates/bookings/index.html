@@ -6,10 +6,10 @@
     <h1>Bookings</h1>
 </header>
 <article class="container">
-    <div>
         <table class="table">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Member Name</th>
                 <th>Course</th>
                 <th>Date</th>
@@ -19,6 +19,7 @@
             <tbody>
                 {% for booking in bookings %}
                 <tr>
+                    <td><a href="/bookings/{{ booking.id }}">{{ booking.id }}</a></td>
                     <td><a href="/members/{{ booking.member.id }}">{{ booking.member.name }}</td>
                     <td><a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></td>
                     <td>{{ booking.course.date }}</td>
@@ -27,32 +28,7 @@
                 {% endfor %}
             </tbody>
         </table>
-    </div>
 </article>
-<!-- 
-
-
-
-
-
-
-    {% for booking in bookings %}
-    <div class="box">
-        <p>Member : <a href="/members/{{ booking.member.id }}">{{ booking.member.name }}</a></p>
-        <p>Course : <a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></p>
-        <p>Date: {{ booking.course.date }}</p>
-        <p>Spaces Left: {{ booking.course.capacity }}</p>
-        <div class="flex-center">
-            <button>
-                <a href="/bookings/{{ booking.id }}">Details</a>
-            </button>
-            <button class="delete-button">
-                <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
-            </button>
-        </div>
-    </div>
-    {% endfor %}
-</article> -->
 
 <footer class="footer">
     <button>
@@ -61,3 +37,8 @@
 </footer>
 
 {% endblock %}
+
+<!-- <button id="div-details-button"><a href="/bookings/{{ booking.id }}">Details</a></button> -->
+<!-- <div id="button-div">
+    <button id="div-delete-button" class="delete-button"><a href="/bookings/delete/{{ booking.id }}">Delete Booking</a></button>
+</div> -->

@@ -8,15 +8,20 @@
 
 <article class="container">
     <div class="box">
-        <p>Class Title: {{ course.title }}</p>
-        <p>Member Name: {{ member.name }}</p>
-        <p>Course Date: {{ course.date }}</p>
-        <p>Course Capacity: {{ course.capacity }}</p>
+        <p>Course: {{ course.title }}</p><br>
+        <p>Member: {{ member.name }}</p><br>
+        <p>Course Date: {{ course.date }}</p><br>
+        <p>Spaces Left: {{ course.capacity }}</p><br>
+        <span class="flex-center">
+            <button class="delete-button">
+                <a href="/bookings/delete/{{ booking.id }}">Delete Booking</a>
+            </button>
+        </span>
     </div>
     <div class="box">
-        <h2>Members Booked This Course</h2>
+        <h2>Members Booked</h2>
         {% for member in booked_members %}
-        <a href="/members/{{ member.id }}">{{ member.name }}</a>
+        <a href="/members/{{ member.id }}">{{ member.name }}</a><br>
         {% endfor %}
     </div>
 </article>
