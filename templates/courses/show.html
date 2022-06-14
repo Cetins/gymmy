@@ -14,11 +14,15 @@
         <p>Spaces Left: {{ course.capacity }}</p>
         <p>Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
     </div>
-    <div class="box">
-        <h2>Bookings</h2>
-        {% for member in booked_members %}
-        <a href="/members/{{ member.id }}">{{ member.name }}</a>
-        {% endfor %}
+    <div class="box main-box">
+        <h2 class="paddding-1rem">Bookings</h2>
+        {% if not booked_members %}
+            <p>There isn't any bookings yet</p>
+        {% else %}
+            {% for member in booked_members %}
+                <a class="paddding-1rem" href="/members/{{ member.id }}">{{ member.name }}</a>
+            {% endfor %}
+        {% endif %}
     </div>
 </article>
 
