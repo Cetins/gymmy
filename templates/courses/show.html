@@ -12,7 +12,7 @@
         <p>Level: {{ course.level }}</p>
         <p>Date: {{ course.date }}</p>
         <p>Spaces Left: {{ course.capacity }}</p>
-        <p>Active: {{ course.active }}</p>
+        <p>Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
     </div>
     <div class="box">
         <h2>Bookings</h2>

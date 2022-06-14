@@ -12,7 +12,7 @@
         <p>Level: {{ course.level }}</p>
         <p>Date: {{ course.date }}</p>
         <p>Spaces Left: {{ course.capacity }}</p>
-        <p>Course Active: {{ course.active }}</p>
+        <p>Course Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
         <div class="flex-center">
             <button>
                 <a href="/courses/edit/{{ course.id }}">Edit Course</a>

@@ -29,6 +29,7 @@ def new():
 @courses_blueprint.route("/courses", methods=["POST"])
 def add_course():
     title = request.form['title']
+    title = title.title()
     level = request.form['level']
     date = request.form['date']
     capacity = request.form['capacity']
@@ -46,6 +47,7 @@ def edit_course(id):
 @courses_blueprint.route("/courses/<id>", methods=["POST"])
 def update_course(id):
     title = request.form['title']
+    title = title.title()
     level = request.form['level']
     date = request.form['date']
     capacity = request.form['capacity']
