@@ -8,11 +8,11 @@
 <article class="container">
     {% for course in courses %}
     <div class="box">
-        <p>Course : <a href="/courses/{{ course.id }}">{{ course.title }}</a></p>
-        <p>Level: {{ course.level }}</p>
-        <p>Date: {{ course.date }}</p>
-        <p>Spaces Left: {{ course.capacity }}</p>
-        <p>Course Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
+        <h2><a href="/courses/{{ course.id }}">{{ course.title }}</h2><br>
+        <p>Level: {{ course.level }}</p><br>
+        <p>Date: {{ course.date }}</p><br>
+        <p>Spaces Left: {{ course.capacity }}</p><br>
+        <p>Course Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p><br>
         <div class="flex-center">
             <button>
                 <a href="/courses/edit/{{ course.id }}">Edit Course</a>
