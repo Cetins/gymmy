@@ -1,0 +1,21 @@
+.table {
+    width: 100vh;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #2c2c2c;
+    border-style: solid;
+    color: #2a2a2a;
+    text-align: center;
+}
+  
+.table td, .table th {
+    border-width: 2px;
+    border-color: #2c2c2c;
+    border-style: solid;
+    padding: 1rem;
+}
+
+.table thead {
+    background-color: #EC994B;
+}
