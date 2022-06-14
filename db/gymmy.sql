@@ -5,12 +5,15 @@ DROP TABLE courses;
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
+    age INT,
+    email VARCHAR(255),
     premium BOOL,
     active BOOL
 );
 
 CREATE TABLE courses (
     id SERIAL PRIMARY KEY,
+    level VARCHAR(255),
     title VARCHAR(255),
     date TIMESTAMP,
     capacity INT,

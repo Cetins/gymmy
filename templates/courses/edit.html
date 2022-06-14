@@ -12,6 +12,15 @@
             <label for="course">Course Title</label>
             <input type="text" name="title" value="  {{course.title}}">
         </span>
+
+        <span>
+            <label for="level">Level</label>
+            <select name="level">
+                <option value="Beginner" {% if course.level == "Beginner" %} selected {% endif %}>Beginner</option>
+                <option value="Intermediate" {% if course.level == "Intermediate" %} selected {% endif %}>Intermediate</option>
+                <option value="Advanced" {% if course.level == "Advanced" %} selected {% endif %}>Advanced</option>
+            </select>
+        </span>
     
         <span>
             <label for="date">Date</label>

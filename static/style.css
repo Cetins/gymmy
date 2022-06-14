@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     background: url(images/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -41,6 +47,7 @@ li {
     color: #F1EEE9;
     display: flex;
     align-items: baseline;
+    justify-content: center;
     margin-left: 200px;
 
 }
@@ -50,7 +57,9 @@ li {
 }
 
 .container {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: auto;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -69,12 +78,16 @@ li {
     color: black;
 }
 
+.box>p {
+    margin: 1rem;
+}
+
 .form-box {
     padding: 1rem;
     display: grid;
     place-items: center;
     background: #F1EEE9;
-    max-width: max-content;
+    /* max-width: max-content; */
     border-radius: 1rem;
     color: black;
 }
@@ -84,15 +97,15 @@ label {
     width: 9rem;
 }
 
-input, select, option {
-    margin: 1rem;
-    padding: 0, 1rem;
-    height: 3rem;
-    width: 13rem;
+input, select {
+    margin: 10px;
+    height: 40px;
+    width: 200px;
+    border: 1px solid gray;
 }
 
 .footer {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: 200px;
 }

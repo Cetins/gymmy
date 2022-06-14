@@ -9,8 +9,9 @@
     {% for course in courses %}
     <div class="box">
         <p>Course : <a href="/courses/{{ course.id }}">{{ course.title }}</a></p>
+        <p>Level: {{ course.level }}</p>
         <p>Date: {{ course.date }}</p>
-        <p>Capacity: {{ course.capacity }}</p>
+        <p>Spaces Left: {{ course.capacity }}</p>
         <p>Course Active: {{ course.active }}</p>
         <div class="flex-center">
             <button>

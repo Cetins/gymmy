@@ -29,10 +29,11 @@ def new():
 @courses_blueprint.route("/courses", methods=["POST"])
 def add_course():
     title = request.form['title']
+    level = request.form['level']
     date = request.form['date']
     capacity = request.form['capacity']
     active = request.form['active']
-    new_course = Course(title, date, capacity, active)
+    new_course = Course(title, level, date, capacity, active)
     course_repository.save(new_course)
     
     return redirect("/courses")
@@ -45,10 +46,11 @@ def edit_course(id):
 @courses_blueprint.route("/courses/<id>", methods=["POST"])
 def update_course(id):
     title = request.form['title']
+    level = request.form['level']
     date = request.form['date']
     capacity = request.form['capacity']
     active = request.form['active']
-    updated_course = Course(title, date, capacity, active, id)
+    updated_course = Course(title, level, date, capacity, active, id)
     course_repository.update(updated_course)
     
     return redirect("/courses")

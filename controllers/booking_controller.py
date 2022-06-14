@@ -57,7 +57,7 @@ def add_booking():
         if peak_time.hour > 17:
             apology = [
                 f"{member.name} does not have a premium membership.",
-                f"In order to book a peak-hour course {member.name} need to have premium membership." 
+                f"In order to book a peak-hour course {member.name} needs to have premium membership." 
                 ]
             return render_template("/bookings/apology.html", apology=apology)
     if course.capacity < 1:

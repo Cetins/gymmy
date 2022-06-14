@@ -9,6 +9,8 @@
     {% for member in members %}
     <div class="box">
         <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
+        <p>Name : {{ member.age }}</p>
+        <p>Name : {{ member.email }}</p>
 
         {% if member.premium %}
             <p>Membership : Premium</p>
@@ -19,7 +21,7 @@
         {% if member.active %}
             <p>Active Member : Yes</p>
         {% else %}
-            <p>Active Member : Yes</p>
+            <p>Active Member : No</p>
         {% endif %}
 
         <div class="flex-center">
