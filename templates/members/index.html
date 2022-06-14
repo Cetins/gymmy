@@ -8,7 +8,7 @@
 <article class="container">
     {% for member in members %}
     <div class="box">
-        <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
+        <h2><a href="/members/{{ member.id }}">{{ member.name }}</a></h2>
         <p>Age : {{ member.age }}</p>
         <p>Email : {{ member.email }}</p>
 
