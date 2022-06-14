@@ -5,14 +5,34 @@
 <header class="title">
     <h1>Member Details</h1>
 </header>
-<article class="container">
-    <div class="box">
-        <h1>{{ member.name }}</h1>
-        <p>{{ member.age }}</p>
-        <p>{{ member.email }}</p>
-        <p>Premium: {{ member.premium }}</p>
-        <p>Active: {{ member.active }}</p>
-    </div>
-</article>
+<section class="container">
+    <article class="box main-box">
+        <div>
+            <h1>{{ member.name }}</h1><br>
+            <p>Age : {{ member.age }}</p><br>
+            <p>Email : {{ member.email }}</p><br>
+    
+            {% if member.premium %}
+                <p>Membership : Premium</p><br>
+            {% else %}
+                <p>Membership : Standard</p><br>
+            {% endif %}
+    
+            {% if member.active %}
+                <p>Active Member : Yes</p><br>
+            {% else %}
+                <p>Active Member : No</p><br>
+            {% endif %}
+        </div>
+    </article>
+    <article class="box main-box">
+        <div>
+            <h2>Booked Courses</h2><br>
+            {% for course in booked_courses %}
+            <h3>{{ course.title }}</h3><p><i class="fa-solid fa-calendar-check"></i> {{ course.date }}</p><br>
+            {% endfor %}
+        </div>
+    </article>
+</section>
 
 {% endblock %}

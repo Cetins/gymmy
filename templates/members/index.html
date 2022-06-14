@@ -9,8 +9,8 @@
     {% for member in members %}
     <div class="box">
         <p>Name : <a href="/members/{{ member.id }}">{{ member.name }}</a></p>
-        <p>Name : {{ member.age }}</p>
-        <p>Name : {{ member.email }}</p>
+        <p>Age : {{ member.age }}</p>
+        <p>Email : {{ member.email }}</p>
 
         {% if member.premium %}
             <p>Membership : Premium</p>

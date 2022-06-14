@@ -26,6 +26,12 @@ def list_bookings_for_course(course_id):
     bookings = run_sql(sql, values)
     return bookings
 
+def list_bookings_for_member(member_id):
+    sql = "SELECT * FROM bookings WHERE member_id=%s"
+    values = [member_id]
+    bookings = run_sql(sql, values)
+    return bookings
+
 def select(id):
     sql = "SELECT * FROM bookings WHERE id=%s"
     values = [id]
