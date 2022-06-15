@@ -3,8 +3,15 @@
 {% block content %}
 
 <header class="title">
-    <h1>Members</h1>
+        <h1>Members</h1>
 </header>
+<br><br>
+<section class="flex-center-section">
+    <button>
+        <a href="/members/new">Add New Member</a>
+    </button>
+</section>
+<br><br>
 <article class="container">
     {% for member in members %}
     <div class="box">
@@ -36,9 +43,5 @@
     {% endfor %}
 </article>
 
-<footer class="footer">
-    <button>
-        <a href="/members/new">Add New Member</a>
-    </button>
-</footer>
+
 {% endblock %}

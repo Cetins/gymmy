@@ -31,6 +31,14 @@ a:hover {
 .flex-center {
     display: flex;
     justify-items: center;
+    justify-content: center;
+}
+
+.flex-center-section {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-left: 200px;
 }
 
 li {
@@ -90,7 +98,7 @@ li {
 }
 
 .form-box {
-    padding: 1rem;
+    padding: 2rem;
     display: grid;
     place-items: center;
     background: #F1EEE9;
@@ -115,4 +123,10 @@ input, select {
     display: flex;
     justify-content: center;
     margin-left: 200px;
+}
+
+#small-heading {
+    background-color: #EC994B;
+    padding: 1rem;
+    border-radius: 0.7rem;
 }

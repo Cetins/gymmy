@@ -1,8 +1,5 @@
 from db.run_sql import run_sql
 
-from models.booking import Booking
-from models.member import Member
-from models.course import Course
 import repositories.course_repository as course_repository
 
 def save(booking):
@@ -12,7 +9,7 @@ def save(booking):
     id = results[0]['id']
     course = course_repository.select(booking.course.id)
     course.capacity -=1
-    course_repository.update(course)
+    course_repository.update(course) 
     booking.id = id
 
 def select_all():

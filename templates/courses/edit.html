@@ -5,14 +5,13 @@
 <header class="title">
     <h1>Edit Course</h1>
 </header>
-
+<br><br>
 <article class="container">
     <form class="form-box" action="/courses/{{course.id}}" method="post">
         <span>
             <label for="course">Course Title</label>
             <input type="text" name="title" value="  {{course.title}}">
         </span>
-
         <span>
             <label for="level">Level</label>
             <select name="level">
@@ -20,18 +19,15 @@
                 <option value="Intermediate" {% if course.level == "Intermediate" %} selected {% endif %}>Intermediate</option>
                 <option value="Advanced" {% if course.level == "Advanced" %} selected {% endif %}>Advanced</option>
             </select>
-        </span>
-    
+        </span>   
         <span>
             <label for="date">Date</label>
             <input type="datetime-local" name="date"  value="{{course.date.isoformat()}}">
         </span>
-    
         <span>
             <label for="capacity">Capacity</label>
             <input type="number" name="capacity" value="{{course.capacity}}">
         </span>
-    
         <span>
             <label for="active">Active</label>
             <select name="active">
@@ -39,8 +35,7 @@
                 <option value="False" {% if course.active == False %} selected {% endif %}>Deactive</option>
             </select>
         </span>
-    
-        <input type='submit' value="Update Course">
+        <input class="submit-input" type='submit' value="Update Course">
     </form>
 </article>
 

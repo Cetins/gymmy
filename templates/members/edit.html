@@ -5,7 +5,7 @@
 <header class="title">
     <h1>Edit Member</h1>
 </header>
-
+<br><br>
 <article class="container">
     <form class="form-box" action="/members/{{member.id}}" method="post">
         <span>
@@ -20,7 +20,7 @@
         <br>
         <span>
             <label for="email">Member Email</label>
-            <input type="text" name="email" value="  {{member.email}}">
+            <input type="email" name="email" value="  {{member.email}}">
         </span>
         <br>
         <span>
@@ -39,7 +39,7 @@
             </select>
         </span>
         <br>
-        <input type='submit' value="Update Member">
+        <input class="submit-input" type='submit' value="Update Member">
     </form>
 </article>
 

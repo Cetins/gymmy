@@ -15,7 +15,7 @@
         <p>Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
     </div>
     <div class="box main-box">
-        <h2 class="paddding-1rem">Bookings</h2>
+        <h2 id="small-heading" class="paddding-1rem">Bookings</h2>
         {% if not booked_members %}
             <p>There isn't any bookings yet</p>
         {% else %}

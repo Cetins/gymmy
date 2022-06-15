@@ -5,13 +5,20 @@
 <header class="title">
     <h1>Bookings</h1>
 </header>
+<br><br>
+<section class="flex-center-section">
+    <button>
+        <a href="/bookings/new">Add New Booking</a>
+    </button>
+</section>
+<br><br>
 <article class="container">
         <table class="table">
             <thead>
               <tr>
-                <th>ID</th>
                 <th>Member Name</th>
                 <th>Course</th>
+                <th>Level</th>
                 <th>Date</th>
                 <th>Spaces Left</th>
               </tr>
@@ -19,9 +26,9 @@
             <tbody>
                 {% for booking in bookings %}
                 <tr>
-                    <td><a href="/bookings/{{ booking.id }}">{{ booking.id }}</a></td>
-                    <td><a href="/members/{{ booking.member.id }}">{{ booking.member.name }}</td>
+                    <td><a href="/bookings/{{ booking.id }}">{{ booking.member.name }}</td>
                     <td><a href="/courses/{{ booking.course.id }}">{{ booking.course.title }}</a></td>
+                    <td>{{ booking.course.level }}</td>
                     <td>{{ booking.course.date }}</td>
                     <td>{{ booking.course.capacity }}</td>
                 </tr>
@@ -29,16 +36,6 @@
             </tbody>
         </table>
 </article>
-
-<footer class="footer">
-    <button>
-        <a href="/bookings/new">Add New Booking</a>
-    </button>
-</footer>
+<br><br><br>
 
 {% endblock %}
-
-<!-- <button id="div-details-button"><a href="/bookings/{{ booking.id }}">Details</a></button> -->
-<!-- <div id="button-div">
-    <button id="div-delete-button" class="delete-button"><a href="/bookings/delete/{{ booking.id }}">Delete Booking</a></button>
-</div> -->

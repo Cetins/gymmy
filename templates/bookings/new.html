@@ -5,7 +5,7 @@
 <header class="title">
     <h1>New Booking</h1>
 </header>
-
+<br><br>
 <article class="container">
     <form class="form-box" action="/bookings" method="post">
         <span>
@@ -13,12 +13,11 @@
             <select name="member_id" id="member">
             {% for member in members %}
                 {% if member.active %}
-                <option value="{{ member.id }}">{{ member.name }}</option>
+                <option value="{{ member.id }}">{{ member.name }} {% if member.premium %}- Premium{% endif %}</option>
                 {% endif %}
             {% endfor %}
             </select>
         </span>
-        
         <span>
             <label for="course">Choose A Course</label>
             <select name="course_id">
@@ -30,7 +29,7 @@
             </select>
         </span>
     
-        <input type='submit' value="Add Booking">
+        <input class="submit-input" type='submit' value="Add Booking">
     </form>
 </article>
 

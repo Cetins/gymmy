@@ -5,14 +5,21 @@
 <header class="title">
     <h1>Courses</h1>
 </header>
+<br><br>
+<section class="flex-center-section">
+    <button>
+        <a href="/courses/new">Add new Course</a>
+    </button>
+</section>
+<br><br>
 <article class="container">
     {% for course in courses %}
     <div class="box">
-        <h2><a href="/courses/{{ course.id }}">{{ course.title }}</h2><br>
-        <p>Level: {{ course.level }}</p><br>
-        <p>Date: {{ course.date }}</p><br>
-        <p>Spaces Left: {{ course.capacity }}</p><br>
-        <p>Course Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p><br>
+        <h2><a href="/courses/{{ course.id }}">{{ course.title }}</a></h2><br>
+        <p>Level: {{ course.level }}</p>
+        <p>Date: {{ course.date }}</p>
+        <p>Spaces Left: {{ course.capacity }}</p>
+        <p>Course Active: {% if course.active == True %}Yes{% else %}No{% endif %}</p>
         <div class="flex-center">
             <button>
                 <a href="/courses/edit/{{ course.id }}">Edit Course</a>
@@ -23,12 +30,5 @@
         </div>
     </div>
     {% endfor %}
-</article>
-
-<footer class="footer">
-    <button>
-        <a href="/courses/new">Add new Course</a>
-    </button>
-</footer>
 
 {% endblock %}

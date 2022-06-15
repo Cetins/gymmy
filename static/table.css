@@ -16,6 +16,11 @@
     padding: 1rem;
 }
 
+.table td {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+}
+
 .table thead {
     background-color: #EC994B;
 }

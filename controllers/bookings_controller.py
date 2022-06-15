@@ -6,8 +6,6 @@ import repositories.booking_repository as booking_repository
 import repositories.course_repository as course_repository
 import repositories.member_repository as member_repository
 
-
-
 bookings_blueprint = Blueprint("bookings", __name__)
 
 @bookings_blueprint.route("/bookings")
@@ -68,7 +66,6 @@ def add_booking():
         return render_template("/bookings/apology.html", apology=apology)
     
     booking_repository.save(new_booking)
-    
     return redirect("/bookings")
 
 @bookings_blueprint.route("/bookings/delete/<id>")
