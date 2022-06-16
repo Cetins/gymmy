@@ -78,14 +78,6 @@ Make your changes and click update.
 
 Most of the names and titles are linking nicely in order to create easy access and smooth navigation through pages. When you click on a course you can see all the members who booked that course and if you click any of the member names you can navigate through that members single page.
 
-
-
-
-
-
-
-
-
-
+<img width="300" alt="Screenshot 2022-06-16 at 01 48 37" src="https://user-images.githubusercontent.com/69481095/173966224-1fd0a433-72cb-4554-98bc-3f8eec25029a.png">
 
 
