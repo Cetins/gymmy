@@ -81,3 +81,20 @@ Most of the names and titles are linking nicely in order to create easy access a
 <img width="300" alt="Screenshot 2022-06-16 at 01 48 37" src="https://user-images.githubusercontent.com/69481095/173966224-1fd0a433-72cb-4554-98bc-3f8eec25029a.png">
 
 
+# Developer Notes
+
+To run this project in your machine:
+
+* Clone the project with ```git clone <project_link>```
+* Ensure you have installed:
+    * Python / python.org
+    * PostgreSQL /  postgresql.org
+    * Flask ```pip install Flask ````
+    * Psycopg2 ```pip install pycopg2 ````
+* On terminal of the project main folder:
+    * create database ```createdb gymmy```
+    * add dummydata ```psql -d gymmy -f db/gymmy.sql```
+    * run console ```python console.py```
+    * to view your app on your localhost```flask --app app run``` then CTRL + click the link on the terminal.
+
+Feel free the open issues in this repository :)
