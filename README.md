@@ -89,8 +89,8 @@ To run this project in your machine:
 * Ensure you have installed:
     * Python / python.org
     * PostgreSQL /  postgresql.org
-    * Flask ```pip install Flask ````
-    * Psycopg2 ```pip install pycopg2 ````
+    * Flask ```pip install Flask ```
+    * Psycopg2 ```pip install pycopg2 ```
 * On terminal of the project main folder:
     * create database ```createdb gymmy```
     * add dummydata ```psql -d gymmy -f db/gymmy.sql```
