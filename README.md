@@ -1,6 +1,6 @@
 # GYMMY
 
-## Small business management app
+## CRM Web Application with Python Flask
 
 <img width="500" alt="Screenshot 2022-06-16 at 01 04 30" src="https://user-images.githubusercontent.com/69481095/173961978-edfb821f-f7c1-40dd-8d35-52c8099531d8.png">
 
